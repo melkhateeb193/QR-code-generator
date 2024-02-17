@@ -106,4 +106,7 @@ left: 9rem;
     header img {
       width: 6rem;
     }
+    div#inputField {
+      width: 100%;
+  }
 }

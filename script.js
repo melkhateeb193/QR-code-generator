@@ -5,28 +5,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const qrImg = document.querySelector('.qrImg .outPut span');
     const firstDiv = document.getElementById('firstDiv');
     const downloadBtn = document.getElementById('downloadBtn')
-
-console.log(firstDiv)
+    const Header = document.getElementById('Header')
+    const qrCodeOutput1 = document.getElementById('qrCodeOutput')
+    console.log(qrImg)
     qrBtn.addEventListener('click', () => {
-        const inputValue = inputId.value.trim();
+        const inputValue = inputId.value.trim("");
 
         if (inputValue !== "") {
+
             let qrCode = new QRCode(qrImg, {
                 text: inputValue,
                 width:200,
                 height:200,
+
+             
            
             });
-
+        
             qrCodeOutput.classList.remove('d-none');
             firstDiv.classList.replace('d-flex' , 'd-none');
+            Header.classList.replace('d-none','d-block')
+
+            
+           
         }
     });
 
-
+ 
 
 
     downloadBtn.addEventListener("click" , ()=>{
+
         const qrCodeDataURL = qrImg.querySelector('canvas').toDataURL('image/png');
         downloadTextFile(qrCodeDataURL , "qrcode.png") 
 
@@ -38,6 +47,5 @@ console.log(firstDiv)
         link.download = fileName;
         link.click()
     }
-
-    
 });
+
