@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR code Generator</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <img src="dccl--javascript-qa-code-generator/logo-qr-generator.svg" alt="">
+</header>
+    <main class="  d-flex justify-content-center align-items-center ">
+        <!-- first Div -->
+        <div id="firstDiv" class="d-flex flex-column justify-content-center align-content-center  ">
+            <img src="dccl--javascript-qa-code-generator/logo-qr-generator.svg" alt="logo">
+            <div id="inputField" class="mt-4 d-flex ">
+                <input id="inputId" type="text" placeholder="Enter an url">
+                <button class="qrBtn">QR code</button>
+            </div>
+        </div>
+        <!-- second Div -->
+        <div class="d-none  QrcodeOutput w-100 h-100 d-flex flex-column justify-content-around   align-items-center ">
+            <div class="qrImg d-flex justify-content-around  flex-column ">
+            <div class="outPut position-relative mb-5 ">
+                <span class="d-flex justify-content-center align-items-center "></span>
+            </div>
+            <div class="divBtn d-flex justify-content-around  align-items-center  ">
+                <button id="downloadBtn" class="d-flex justify-content-around   align-items-center ">download <i class="fa-solid fa-arrow-down ms-2" style="color: #ffffff; "></i></button>
+                <button class="d-flex justify-content-around   align-items-center ">Share <i class="fa-solid fa-link" style="color: #ffffff;"></i></button>
+            </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    font-family: "Outfit", sans-serif;
+    --primary-color-one: #F2F5F9;
+    --primary-color-two: #3662E3;
+    --primary-color-three: #111729;
+    --primary-color-four: #364153;
+    --primary-color-five: #4e80ee33;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../dccl--javascript-qa-code-generator/bg-illustration.svg");
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-color: var(--primary-color-three);
+    padding: 1rem;
+    background-position: right -1rem center ;
+}
+
+input {
+    border: none;
+    background-color: var(--primary-color-three);
+    width: 70%;
+    outline: none;
+    color: var(--primary-color-one);
+}
+
+#inputField {
+    border: 2px solid var(--primary-color-two);
+    border-radius: 10px;
+    padding: 3px 5px;
+    max-width: 400px; /* Set a max-width for the input field container */
+    width: 100%; /* Make the input field container width 100% */
+}
+
+button {
+    border: none;
+    color: var(--primary-color-one);
+    background-color: var(--primary-color-two);
+    width: 70%;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+}
+
+.divBtn button {
+    margin-top: 10px;
+    width: 8rem !important;
+    padding: 0.7rem 1.6rem;
+}
+
+.outPut {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: var(--primary-color-five);
+}
+
+span {
+    position: absolute;
+    width: 85%;
+    top: 23px;
+    left: 23px;
+    border-radius: 20px;
+    margin: auto;
+    height: 85%;
+    top: 20px;
+    background-color: white;
+    padding: 10px;
+}
+
+header{
+position: absolute;
+top: 50px;
+left: 9rem;
+}
+@media screen and (max-width: 812px) {
+    body {
+        background-size: 100%; /* Adjust background size for smaller screens */
+        background-position: center; /* Center the background image on smaller screens */
+    }
+
+    #inputField {
+        width: 90%; /* Adjust the width of the input field container for smaller screens */
+    }
+
+    button {
+        width: 40%; /* Adjust the width of the button for smaller screens */
+    }
+
+    .divBtn button {
+        width: 100%; /* Make the buttons full width on smaller screens */
+    }
+    header{
+      top: 30px;
+      left: 1rem;
+    }
+    header img {
+      width: 6rem;
+    }
+}
